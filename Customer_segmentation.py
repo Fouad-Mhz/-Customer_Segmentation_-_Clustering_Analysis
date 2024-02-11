@@ -744,6 +744,15 @@ for i in range(n):
 print(ari_values)
 
 # Plot ARI Trends
+
+# Initialize an empty list to store time points
+time_points = []
+
+for i in range(n):
+    time_point = i * month_window
+    time_points.append(time_point)
+
+# Plot ARI Trends
 plt.plot(time_points, ari_values, marker='o')
 plt.xlabel('Time Points')
 plt.ylabel('ARI Values')
@@ -754,7 +763,7 @@ plt.show()
 
 ari_values
 
-"""The list of ARI values you provided represents the similarity between the clustering results of the base data frame and each subsequent data frame.
+"""The list of ARI values provided represents the similarity between the clustering results of the base data frame and each subsequent data frame.
 
 > Overall, the ARI values indicate a strong level of stability and consistency in the clustering results over time. The high ARI values indicate that the clustering patterns remain similar, with only minor variations observed in some cases. This suggests that the clustering approach captures meaningful patterns in the data and that the customer behavior or characteristics remain relatively consistent over the analyzed time periods.
 
